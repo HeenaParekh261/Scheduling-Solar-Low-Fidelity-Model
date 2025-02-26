@@ -1,17 +1,16 @@
 *{
+  font-family: "Quicksand";
   margin: 10px;
   padding: 10px:
-  font-family: "Quicksand";
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 form{
+  font-family: "Quicksand";
   text-align: center; 
   background-color: #d3f0ec;
 }
 
 h1{
+  font-family: "Quicksand";
   background-color: yellow;
 }
