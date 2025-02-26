@@ -5,12 +5,16 @@
 }
 
 form{
-  font-family: "Quicksand";
+  font-family: Quicksand, Helvetica, sans-serif;
   text-align: center; 
   background-color: #d3f0ec;
 }
 
 h1{
-  font-family: "Quicksand";
-  background-color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+  background-color: #d3f0d3;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
