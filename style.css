@@ -1,19 +1,12 @@
 *{
   margin: 10px;
   padding: 10px:
+  font-family: Quicksand, Helvetica, sans-serif;
 }
 
 form{
-  font-family: Quicksand, Helvetica, sans-serif;
   text-align: center; 
   background-color: #d3f0ec;
+  width: 80%;
 }
 
-h1{
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h3{
-  background-color: #d3f0d3;
-  font-family: "Lucida Console", "Courier New", monospace;
-}
