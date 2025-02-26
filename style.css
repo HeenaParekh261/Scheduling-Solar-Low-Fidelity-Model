@@ -13,8 +13,6 @@ form{
 .scheduleForm{
   justify-content: center;
   align-items: center;
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
 
@@ -23,7 +21,7 @@ h1, h3, form{
 }
 
 h3{
-  background-color: #d7daf5;
+  background-color: #ddf7cb;
   margin: 20px;
 }
 
