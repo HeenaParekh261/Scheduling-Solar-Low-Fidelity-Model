@@ -7,11 +7,25 @@
 form{
   text-align: center; 
   background-color: #d3f0ec;
-  width: 300px;
+  width: 600px;
   padding: 50 px;
 }
 
+.scheduleForm{
+  text-align: center; 
+  background-color: #a8ede6;
+}
+
 h1{
+  text-align: center; 
+}
+
+h1, h3, form{
+  font-family: Quicksand, Helvetica, sans-serif;
+}
+
+h3{
+  background-color: #d7daf5;
   text-align: center; 
 }
 
