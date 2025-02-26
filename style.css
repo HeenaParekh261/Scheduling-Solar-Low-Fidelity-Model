@@ -7,6 +7,11 @@
 form{
   text-align: center; 
   background-color: #d3f0ec;
-  width: 80%;
+  width: 300px;
+  padding: 50 px;
+}
+
+h1{
+  text-align: center; 
 }
 
