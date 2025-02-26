@@ -7,15 +7,15 @@
 
 form{
   background-color: #d3f0ec;
-  width: 600px;
   padding: 50 px;
 }
 
 .scheduleForm{
   justify-content: center;
   align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
 }
-
 
 
 h1, h3, form{
@@ -24,6 +24,6 @@ h1, h3, form{
 
 h3{
   background-color: #d7daf5;
-  margin: 200px;
+  margin: 20px;
 }
 
