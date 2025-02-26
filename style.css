@@ -1,7 +1,7 @@
 *{
   margin: 10px;
   padding: 10px:
-  font-family: "Quicksand", serif;
+  font-family: "Quicksand";
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -9,5 +9,9 @@
 
 form{
   text-align: center; 
-  background-color: #d3f0ec; 
+  background-color: #d3f0ec;
+}
+
+h1{
+  background-color: yellow;
 }
