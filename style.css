@@ -14,6 +14,7 @@ form{
 .scheduleForm{
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
 }
 
 
@@ -24,5 +25,6 @@ h1, h3, form{
 h3{
   background-color: #ddf7cb;
   margin: 20px;
+  border-radius: 15px;
 }
 
