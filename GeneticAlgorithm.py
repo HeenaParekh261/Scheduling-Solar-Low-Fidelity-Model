@@ -19,7 +19,7 @@ class GeneticAlgorithm :
             
             child = self.onePointCrossOver(parent1, parent2)
             
-            self.bitFlipMutation(child)
+            self.swapMutation(child)
             
             temp.append(child)
             
