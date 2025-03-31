@@ -28,13 +28,19 @@ class GeneticAlgorithm :
         newPopulation.findTheFittest()
         newPopulation.calculateTheFitnessForAll()
         return newPopulation
-        
-    
-    def bitFlipMutation(self , child):
+
+    def swapMutation(self , child):
         if random.random() < self.mutationRate :
-            mutationPoint = random.randint(0, len(child.genes) -1)
+            mutationPoint1 = random.randint(0, len(child.genes) -1)
+            mutationPoint2 = random.randint(0, len(child.genes) -1)
+
+            if mutationPoint1 == mutationPoint2:
+                mutationPoint2 = random.randint(0, len(child.genes) -1)
+
             geneslist = list(child.genes)
-            geneslist[mutationPoint] = "0" if geneslist[mutationPoint] == "1" else "1"
+            swap = geneslist[mutationPoint2]
+            geneslist[mutationPoint2] = geneslist[mutationPoint1]
+            geneslist[mutationPoint1] = swap
             child.genes = ''.join(geneslist)
             child.calculateTheFitness()
     
