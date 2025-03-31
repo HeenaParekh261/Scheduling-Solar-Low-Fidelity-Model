@@ -1,4 +1,7 @@
 #Base code taken from https://gist.github.com/AnasBrital98/5802390bd20cba541af41f483fa8fe4c#file-geneticalgorithmexample1-py
+
+import random
+
 class GeneticAlgorithm : 
     
     def __init__(self , populationSize , chromosomeSize , tournamentSize , elitismSize , mutationRate , function):
