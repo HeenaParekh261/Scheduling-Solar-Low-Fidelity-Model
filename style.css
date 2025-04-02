@@ -72,11 +72,11 @@ h4{
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #95E4E8;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  color: #000000;
+  color: #FFFFFF;
   background-color: #3c7f83;
 }
