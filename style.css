@@ -29,10 +29,23 @@ h3{
 }
 
 h1{
-  font-size: 80px;
+  font-size: 60px;
+  margin: 50px;
+  padding: 50 px;
+  text-align: center;
+}
+
+.instructions{
+  text-align: left;
+  
 }
 
 /*Navigation Bar*/
+.topnav {
+  background-color: #407C82;
+  overflow: hidden;
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
