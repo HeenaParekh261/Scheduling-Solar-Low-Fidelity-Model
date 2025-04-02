@@ -3,7 +3,7 @@
 import random
 from Population import Population
 from chromosome import Chromosome
-
+import numpy as np
 class GeneticAlgorithm : 
     
     def __init__(self , populationSize , chromosomeSize , tournamentSize , elitismSize , mutationRate , function):
@@ -34,20 +34,13 @@ class GeneticAlgorithm :
         newPopulation.calculateTheFitnessForAll()
         return newPopulation
 
-    def swapMutation(self , child):
-        if random.random() < self.mutationRate :
-            mutationPoint1 = random.randint(0, len(child.genes) -1)
-            mutationPoint2 = random.randint(0, len(child.genes) -1)
-
-            if mutationPoint1 == mutationPoint2:
-                mutationPoint2 = random.randint(0, len(child.genes) -1)
-
-            geneslist = list(child.genes)
-            swap = geneslist[mutationPoint2]
-            geneslist[mutationPoint2] = geneslist[mutationPoint1]
-            geneslist[mutationPoint1] = swap
-            child.genes = ''.join(geneslist)
-            child.calculateTheFitness()
+    def swapMutation(self , chromosome):
+        if random.random() < self.mutationRate:
+            layer_idx = random.randint(0, len(chromosome.weights) - 1)
+            i = random.randint(0, chromosome.weights[layer_idx].shape[0] - 1)
+            j = random.randint(0, chromosome.weights[layer_idx].shape[1] - 1)
+            chromosome.weights[layer_idx][i][j] += np.random.normal()
+            chromosome.fitness = chromosome.calculateFitness()
     
     def tournamentSelection(self , population):
         tournamentPool = []
@@ -58,11 +51,14 @@ class GeneticAlgorithm :
         return tournamentPool[0]
     
     def onePointCrossOver(self , parent1 , parent2):
-        temp = []
-        crossOverPoint = random.randint(0, len(parent1.genes) -1)            
-        temp[:crossOverPoint] = parent1.genes[:crossOverPoint]
-        temp[crossOverPoint:] = parent2.genes[crossOverPoint:]
-        child = Chromosome(7, self.function)
-        child.genes = ''.join(temp)
-        child.calculateTheFitness()
-        return child
+        child_weights = []
+        child_biases = []
+        for w1, w2 in zip(parent1.weights, parent2.weights):
+            mask = np.random.rand(*w1.shape) < 0.5
+            child_w = np.where(mask, w1, w2)
+            child_weights.append(child_w)
+        for b1, b2 in zip(parent1.biases, parent2.biases):
+            mask = np.random.rand(*b1.shape) < 0.5
+            child_b = np.where(mask, b1, b2)
+            child_biases.append(child_b)
+        return Chromosome(parent1.NeuralNetwork, weights=child_weights, biases=child_biases)
