@@ -42,12 +42,20 @@ h1{
   text-align: left;
 }
 
+h4{
+  text-align: left;
+}
+
 /*Navigation Bar*/
 .topnav {
   background-color: #95E4E8;
   /*overflow: hidden;*/
   margin: 0px;
-  padding:15px;
+  padding: 10px;
+
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
 /* Style the links inside the navigation bar */
