@@ -1,4 +1,4 @@
-from fitness import fitness
+from fitness_function import fitness
 
 y_true = 540
 
