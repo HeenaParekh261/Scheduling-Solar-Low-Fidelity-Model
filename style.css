@@ -24,10 +24,33 @@ h1, h3, form{
 
 h3{
   background-color: #ddf7cb;
-  margin: 20px;
+  margin: 50px;
   border-radius: 15px;
 }
 
 h1{
-  font-size: 175%;
+  font-size: 80px;
+}
+
+/*Navigation Bar*/
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #95E4E8;
+  color: #FFFFFF;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: white;
+  background-color: #407C82;
 }
