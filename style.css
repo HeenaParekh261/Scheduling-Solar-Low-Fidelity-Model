@@ -31,19 +31,23 @@ h3{
 h1{
   font-size: 60px;
   margin: 50px;
-  padding: 50 px;
+  padding-left: 50px;
+  padding-right: 50px;
   text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .instructions{
   text-align: left;
-  
 }
 
 /*Navigation Bar*/
 .topnav {
-  background-color: #407C82;
-  overflow: hidden;
+  background-color: #95E4E8;
+  /*overflow: hidden;*/
+  margin: 0px;
+  padding:15px;
 }
 
 /* Style the links inside the navigation bar */
@@ -59,11 +63,11 @@ h1{
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #95E4E8;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  color: white;
-  background-color: #407C82;
+  color: #000000;
+  background-color: #3c7f83;
 }
