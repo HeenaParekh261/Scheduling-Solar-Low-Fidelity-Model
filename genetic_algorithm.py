@@ -3,7 +3,7 @@ import pandas as pd
 from population import Population
 
 
-def genetic_algorithm(X, y, population_size=50, generations=100, save_path="best_weights.csv"):
+def genetic_algorithm(X, y, population_size=100, generations=100000, save_path="best_weights.csv"):
     """
     遗传算法主函数：优化线性模型权重以最小化预测误差。
 
