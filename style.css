@@ -1,6 +1,6 @@
 *{
-  margin: 10px;
-  padding: 10px;
+  /*margin: 10px;
+  padding: 10px;*/
   font-family: Quicksand, Helvetica, sans-serif;
   /*text-align: center;*/
 }
@@ -52,16 +52,19 @@ h4{
   background-color: #1d6064;
   /*overflow: hidden;*/
   margin: 0px;
-  padding: 10px;
-
+  padding: 10px 0;
   position: fixed;
   top: 0;
   width: 100%
 }
 
+.topnav img{
+  float: left;
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
+  float: right;
   color: #FFFFFF;
   text-align: center;
   padding: 14px 16px;
@@ -73,6 +76,7 @@ h4{
 .topnav a:hover {
   background-color: #95E4E8;
   color: #FFFFFF;
+  border-radius: 15px;
 }
 
 /* Add a color to the active/current link */
