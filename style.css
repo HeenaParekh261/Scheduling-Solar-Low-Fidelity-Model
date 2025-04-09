@@ -7,7 +7,7 @@
 
 form{
   margin: 10px;
-  background-color: #d3f0ec;
+  background-color: #AACFF0;
   column-count: 2;
   column-width: 200px; 
 }
@@ -25,7 +25,7 @@ h1, h3, form{
 }
 
 h3{
-  background-color: #ddf7cb;
+  background-color: #AACFF0;
   margin: 50px;
   border-radius: 15px;
 }
@@ -89,5 +89,5 @@ h4{
 /* Add a color to the active/current link */
 .topnav a.active {
   color: #FFFFFF;
-  background-color: #3c7f83;
+  background-color: #0f3658;
 }
