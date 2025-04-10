@@ -5,14 +5,15 @@
   /*text-align: center;*/
 }
 
-h1, h3, form{
+h1, form{
   margin: 10px;
   font-family: Quicksand, Helvetica, sans-serif;
 }
 
 h3{
+  font-family: Quicksand, Helvetica, sans-serif;
   background-color: #AACFF0;
-  margin: 50px;
+  margin: 10px;
   border-radius: 15px;
 }
 
@@ -110,7 +111,9 @@ input{
 
 .scheduleForm{
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
+  padding-left: 30%;
+  padding-right: 30%;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
