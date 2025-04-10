@@ -98,3 +98,11 @@ h4{
   color: #FFFFFF;
   background-color: #0f3658;
 }
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
