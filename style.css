@@ -98,7 +98,6 @@ h4{
 form{
   margin: 10px;
   background-color: #AACFF0;
-  column-width: 300px; 
 }
 
 label{
@@ -115,4 +114,5 @@ input{
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  width: 400px;
 }
