@@ -79,3 +79,28 @@ if __name__ == "__main__":
     plt.legend()
     plt.tight_layout()
     plt.show()
+
+    from sklearn.linear_model import LinearRegression
+
+    bias_adjust = LinearRegression(fit_intercept=True)
+    bias_adjust.fit(y_pred_all_ga.reshape(-1, 1), y)  # y ≈ prediction + b
+    y_pred_adjusted = bias_adjust.predict(y_pred_all_ga.reshape(-1, 1))
+
+    plt.figure()
+    plt.scatter(y, y_pred_adjusted, alpha=0.6, s=20, label="GA + Bias Adjust")
+    min_val = min(np.min(y), np.min(y_pred_adjusted))
+    max_val = max(np.max(y), np.max(y_pred_adjusted))
+    plt.plot([min_val, max_val], [min_val, max_val], 'r--', label="y = x")
+    plt.xlabel("Actual Duration (minutes)")
+    plt.ylabel("Adjusted Predicted Duration (minutes)")
+    plt.title("Bias-Corrected GA Prediction vs. Actual")
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+    from sklearn.metrics import mean_squared_error
+
+    mse_corrected = mean_squared_error(y, y_pred_adjusted)
+    rmse_corrected = np.sqrt(mse_corrected)
+    print(f"[GA + Bias Adjust] RMSE on all data = {rmse_corrected:.4f}")
