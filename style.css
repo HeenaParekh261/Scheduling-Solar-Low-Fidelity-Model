@@ -8,7 +8,7 @@
 h3{
   font-family: Quicksand, Helvetica, sans-serif;
   /*background-color: #c8dff3;*/
-  margin: 10px;
+  margin: 50px;
   /*border-radius: 15px;*/
 }
 
@@ -30,7 +30,7 @@ h1{
   text-decoration-style: solid;
 
   /*Adapted from https://stackoverflow.com/questions/12605908/change-background-image-opacity*/
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.3);
   background-blend-mode: lighten;
   background-image: url('SolarPanels.jpg');
 }
