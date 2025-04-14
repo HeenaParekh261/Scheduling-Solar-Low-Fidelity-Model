@@ -89,3 +89,24 @@ if __name__ == "__main__":
     print(f"[GA + Bias Adjust] Mean Bias on all data = {mean_bias:.4f} minutes")
     max_bias = np.max(abs(y_pred_adjusted - y))
     print(f"[GA + Bias Adjust] Max Bias on all data = {max_bias:.4f} minutes")
+
+    bias_constant = np.mean(y - y_pred_all_ga)
+    y_pred_const_adjusted = y_pred_all_ga + bias_constant
+
+    rmse_const = np.sqrt(mean_squared_error(y, y_pred_const_adjusted))
+    mean_bias_const = np.mean(y_pred_const_adjusted - y)
+
+    print(f"[GA + Constant Bias Adjust] RMSE = {rmse_const:.4f}")
+    print(f"[GA + Constant Bias Adjust] Mean Bias = {mean_bias_const:.4f}")
+    print(f"[GA + Constant Bias Adjust] Bias Term Added = {bias_constant:.4f}")
+
+    plt.figure()
+    plt.scatter(y, y_pred_const_adjusted, alpha=0.6, label="Constant Bias Adjust")
+    plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--', label="y = x")
+    plt.xlabel("Actual Duration")
+    plt.ylabel("Predicted Duration")
+    plt.title("Constant Bias Adjustment vs Actual")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
